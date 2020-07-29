@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'colorfield',
 
+    'bookkeeping',
     'comics',
     'persons',
     'tasks',

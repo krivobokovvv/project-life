@@ -29,6 +29,9 @@ class Project(models.Model):
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	description = models.TextField(verbose_name=_('Description'), blank=True, null=True)
 
+	def __str__(self):
+		return self.name
+
 
 class Tag(models.Model):
 	class Meta:
@@ -38,6 +41,9 @@ class Tag(models.Model):
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
 	color = ColorField(default='#FFFFFF')
 
+	def __str__(self):
+		return self.name
+
 
 class Status(models.Model):
 	class Meta:
@@ -46,3 +52,6 @@ class Status(models.Model):
 	
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
 	closed = models.BooleanField(verbose_name=_('Closed?'), default=False)
+
+	def __str__(self):
+		return self.name

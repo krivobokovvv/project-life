@@ -55,3 +55,6 @@ class Tag(models.Model):
 
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
 	color = ColorField(verbose_name=_('Color'), default='#FFFFFF')
+
+	def __str__(self):
+		return self.name

@@ -16,6 +16,12 @@ class Person(models.Model):
 
 	deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
 
+	def __str__(self):
+		if self.nick is not None:
+			return self.nick
+		else:
+			return f'{self.last_name} {self.first_name} {self.middle_name}'
+
 
 class Contact(models.Model):
 	class Meta:
@@ -26,6 +32,9 @@ class Contact(models.Model):
 	contact_type = models.ForeignKey('ContactType',on_delete=models.PROTECT)
 	value = models.CharField(verbose_name=_('Value'), max_length=100)
 
+	def __str__(self):
+		return f'{self.contact_type}: {self.value}'
+
 
 class ContactType(models.Model):
 	class Meta:
@@ -35,6 +44,9 @@ class ContactType(models.Model):
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100, blank=True, null=True)
 
+	def __str__(self):
+		return self.name
+
 
 class Company(models.Model):
 	class Meta:
@@ -43,3 +55,6 @@ class Company(models.Model):
 
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	address = models.CharField(verbose_name=_('Address'), max_length=150, blank=True, null=True)
+
+	def __str__(self):
+		return self.name

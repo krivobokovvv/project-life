@@ -2,5 +2,5 @@ from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
 class ComicsConfig(AppConfig):
-    name = 'comics'
-    verbose_name = _('Comics')
+	name = 'comics'
+	verbose_name = _('Comics')

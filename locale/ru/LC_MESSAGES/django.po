@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Krivobokov Valentin <krivobokovvv@yandex.ru>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-28 12:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: comics/apps.py:6
+msgid "Comics"
+msgstr "Комиксы"
+
+#: comics/models.py:10
+msgid "Book"
+msgstr "Книга"
+
+#: comics/models.py:11
+msgid "Books"
+msgstr "Книги"
+
+#: comics/models.py:13 comics/models.py:28
+msgid "Title"
+msgstr "Название"
+
+#: comics/models.py:14
+msgid "Author"
+msgstr "Автор"
+
+#: comics/models.py:16
+msgid "Preview"
+msgstr "Превью"
+
+#: comics/models.py:24 comics/models.py:41
+msgid "Chapter"
+msgstr "Раздел"
+
+#: comics/models.py:25
+msgid "Chapters"
+msgstr "Разделы"
+
+#: comics/models.py:36 comics/models.py:46
+msgid "Page"
+msgstr "Страница"
+
+#: comics/models.py:37
+msgid "Pages"
+msgstr "Страницы"
+
+#: comics/models.py:42
+msgid "Number"
+msgstr "Номер"
+
+#: comics/models.py:43
+msgid "Image"
+msgstr "Изображение"
+
+#: comics/models.py:52 tasks/models.py:35
+msgid "Tag"
+msgstr "Тег"
+
+#: comics/models.py:53 tasks/models.py:36
+msgid "Tags"
+msgstr "Теги"
+
+#: comics/models.py:55 persons/models.py:33 persons/models.py:42
+#: tasks/models.py:29 tasks/models.py:38 tasks/models.py:47
+msgid "Name"
+msgstr "Имя"
+
+#: comics/models.py:56
+msgid "Color"
+msgstr "Цвет"
+
+#: life/settings.py:118
+msgid "Russian"
+msgstr "Русский"
+
+#: life/settings.py:119
+msgid "English"
+msgstr "Английский"
+
+#: persons/apps.py:7 persons/models.py:7
+msgid "Persons"
+msgstr "Люди"
+
+#: persons/models.py:6
+msgid "Person"
+msgstr "Персона"
+
+#: persons/models.py:9
+msgid "First name"
+msgstr "Имя"
+
+#: persons/models.py:10
+msgid "Middle name"
+msgstr "Отчество"
+
+#: persons/models.py:11
+msgid "Last name"
+msgstr "Фамилия"
+
+#: persons/models.py:12
+msgid "Birthday"
+msgstr "День рождения"
+
+#: persons/models.py:14
+msgid "Position"
+msgstr "Должность"
+
+#: persons/models.py:16
+msgid "Deleted?"
+msgstr "Удалено?"
+
+#: persons/models.py:21
+msgid "Contact"
+msgstr "Контакт"
+
+#: persons/models.py:22
+msgid "Contacts"
+msgstr "Контакты"
+
+#: persons/models.py:30
+msgid "Contact type"
+msgstr "Тип контакта"
+
+#: persons/models.py:31
+msgid "Contact types"
+msgstr "Типы контактов"
+
+#: persons/models.py:34
+msgid "Regular expression"
+msgstr "Регулярное выражение"
+
+#: persons/models.py:39
+msgid "Company"
+msgstr "Организация"
+
+#: persons/models.py:40
+msgid "Companies"
+msgstr "Организации"
+
+#: tasks/apps.py:7 tasks/models.py:12
+msgid "Tasks"
+msgstr "Задачи"
+
+#: tasks/models.py:11
+msgid "Task"
+msgstr "Задача"
+
+#: tasks/models.py:14
+msgid "Subject"
+msgstr "Тема"
+
+#: tasks/models.py:15
+msgid "Comment"
+msgstr "Комментарий"
+
+#: tasks/models.py:26
+msgid "Project"
+msgstr "Проект"
+
+#: tasks/models.py:27
+msgid "Projects"
+msgstr "Проекты"
+
+#: tasks/models.py:30
+msgid "Description"
+msgstr "Описание"
+
+#: tasks/models.py:44
+msgid "Status"
+msgstr "Статус"
+
+#: tasks/models.py:45
+msgid "Statuses"
+msgstr "Статусы"
+
+#: tasks/models.py:48
+msgid "Closed?"
+msgstr "Закрыта?"

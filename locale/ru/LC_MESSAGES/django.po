@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-28 12:07+0000\n"
+"POT-Creation-Date: 2020-07-29 11:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Comics"
 msgstr "Комиксы"
 
-#: comics/models.py:10
+#: comics/models.py:10 comics/models.py:27
 msgid "Book"
 msgstr "Книга"
 
@@ -44,7 +44,7 @@ msgstr "Автор"
 msgid "Preview"
 msgstr "Превью"
 
-#: comics/models.py:24 comics/models.py:41
+#: comics/models.py:24 comics/models.py:42
 msgid "Chapter"
 msgstr "Раздел"
 
@@ -52,44 +52,48 @@ msgstr "Раздел"
 msgid "Chapters"
 msgstr "Разделы"
 
-#: comics/models.py:36 comics/models.py:46
+#: comics/models.py:29
+msgid "Count page"
+msgstr "Количество страниц"
+
+#: comics/models.py:37 comics/models.py:47
 msgid "Page"
 msgstr "Страница"
 
-#: comics/models.py:37
+#: comics/models.py:38
 msgid "Pages"
 msgstr "Страницы"
 
-#: comics/models.py:42
+#: comics/models.py:43
 msgid "Number"
 msgstr "Номер"
 
-#: comics/models.py:43
+#: comics/models.py:44
 msgid "Image"
 msgstr "Изображение"
 
-#: comics/models.py:52 tasks/models.py:35
+#: comics/models.py:53 tasks/models.py:38
 msgid "Tag"
 msgstr "Тег"
 
-#: comics/models.py:53 tasks/models.py:36
+#: comics/models.py:54 tasks/models.py:39
 msgid "Tags"
 msgstr "Теги"
 
-#: comics/models.py:55 persons/models.py:33 persons/models.py:42
-#: tasks/models.py:29 tasks/models.py:38 tasks/models.py:47
+#: comics/models.py:56 persons/models.py:44 persons/models.py:56
+#: tasks/models.py:29 tasks/models.py:41 tasks/models.py:53
 msgid "Name"
 msgstr "Имя"
 
-#: comics/models.py:56
+#: comics/models.py:57
 msgid "Color"
 msgstr "Цвет"
 
-#: life/settings.py:118
+#: life/settings.py:120
 msgid "Russian"
 msgstr "Русский"
 
-#: life/settings.py:119
+#: life/settings.py:121
 msgid "English"
 msgstr "Английский"
 
@@ -121,37 +125,49 @@ msgstr "День рождения"
 msgid "Position"
 msgstr "Должность"
 
-#: persons/models.py:16
+#: persons/models.py:15
+msgid "Nick"
+msgstr "Ник"
+
+#: persons/models.py:17
 msgid "Deleted?"
 msgstr "Удалено?"
 
-#: persons/models.py:21
+#: persons/models.py:28
 msgid "Contact"
 msgstr "Контакт"
 
-#: persons/models.py:22
+#: persons/models.py:29
 msgid "Contacts"
 msgstr "Контакты"
 
-#: persons/models.py:30
+#: persons/models.py:33
+msgid "Value"
+msgstr "Значение"
+
+#: persons/models.py:41
 msgid "Contact type"
 msgstr "Тип контакта"
 
-#: persons/models.py:31
+#: persons/models.py:42
 msgid "Contact types"
 msgstr "Типы контактов"
 
-#: persons/models.py:34
+#: persons/models.py:45
 msgid "Regular expression"
 msgstr "Регулярное выражение"
 
-#: persons/models.py:39
+#: persons/models.py:53
 msgid "Company"
 msgstr "Организация"
 
-#: persons/models.py:40
+#: persons/models.py:54
 msgid "Companies"
 msgstr "Организации"
+
+#: persons/models.py:57
+msgid "Address"
+msgstr "Адрес"
 
 #: tasks/apps.py:7 tasks/models.py:12
 msgid "Tasks"
@@ -181,14 +197,14 @@ msgstr "Проекты"
 msgid "Description"
 msgstr "Описание"
 
-#: tasks/models.py:44
+#: tasks/models.py:50
 msgid "Status"
 msgstr "Статус"
 
-#: tasks/models.py:45
+#: tasks/models.py:51
 msgid "Statuses"
 msgstr "Статусы"
 
-#: tasks/models.py:48
+#: tasks/models.py:54
 msgid "Closed?"
 msgstr "Закрыта?"

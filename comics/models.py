@@ -24,9 +24,9 @@ class Chapter(models.Model):
 		verbose_name = _('Chapter')
 		verbose_name_plural = _('Chapters')
 
-	book = models.ForeignKey('Book', verbose_name='Книга', on_delete=models.CASCADE)
+	book = models.ForeignKey('Book', verbose_name=_('Book'), on_delete=models.CASCADE)
 	name = models.CharField(verbose_name=_('Title'), max_length=50)
-	count_page = models.IntegerField(verbose_name='Количество страниц', default=0)
+	count_page = models.IntegerField(verbose_name=_('Count page'), default=0)
 
 	def __str__(self):
 		return self.name

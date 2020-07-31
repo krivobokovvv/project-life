@@ -12,13 +12,13 @@ class Person(models.Model):
 	birthday = models.DateField(verbose_name=_('Birthday'), blank=True, null=True)
 	company = models.ForeignKey('Company', on_delete=models.PROTECT, blank=True, null=True)
 	position = models.CharField(verbose_name=_('Position'), max_length=100, blank=True, null=True)
-	nick = models.CharField(verbose_name=_('Nick'), max_length=30, blank=True, null=True)
+	nickname = models.CharField(verbose_name=_('Nickname'), max_length=30, blank=True, null=True)
 
 	deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
 
 	def __str__(self):
-		if self.nick is not None:
-			return self.nick
+		if self.nickname is not None:
+			return self.nickname
 		else:
 			return f'{self.last_name} {self.first_name} {self.middle_name}'
 

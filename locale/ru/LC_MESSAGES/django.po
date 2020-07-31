@@ -2,16 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Krivobokov Valentin <krivobokovvv@yandex.ru>, 2020.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-29 11:32+0300\n"
+"POT-Creation-Date: 2020-07-31 12:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +41,7 @@ msgstr "Автор"
 msgid "Preview"
 msgstr "Превью"
 
-#: comics/models.py:24 comics/models.py:42
+#: comics/models.py:24 comics/models.py:43
 msgid "Chapter"
 msgstr "Раздел"
 
@@ -56,7 +53,7 @@ msgstr "Разделы"
 msgid "Count page"
 msgstr "Количество страниц"
 
-#: comics/models.py:37 comics/models.py:47
+#: comics/models.py:37 comics/models.py:48
 msgid "Page"
 msgstr "Страница"
 
@@ -64,38 +61,63 @@ msgstr "Страница"
 msgid "Pages"
 msgstr "Страницы"
 
-#: comics/models.py:43
+#: comics/models.py:44
 msgid "Number"
 msgstr "Номер"
 
-#: comics/models.py:44
+#: comics/models.py:45
 msgid "Image"
 msgstr "Изображение"
 
-#: comics/models.py:53 tasks/models.py:38
+#: comics/models.py:54 tasks/models.py:39
 msgid "Tag"
 msgstr "Тег"
 
-#: comics/models.py:54 tasks/models.py:39
+#: comics/models.py:55 tasks/models.py:40
 msgid "Tags"
 msgstr "Теги"
 
-#: comics/models.py:56 persons/models.py:44 persons/models.py:56
-#: tasks/models.py:29 tasks/models.py:41 tasks/models.py:53
+#: comics/models.py:57 persons/models.py:44 persons/models.py:56
+#: tasks/models.py:30 tasks/models.py:42 tasks/models.py:54
 msgid "Name"
 msgstr "Имя"
 
-#: comics/models.py:57
+#: comics/models.py:58
 msgid "Color"
 msgstr "Цвет"
 
-#: life/settings.py:120
+#: life/settings.py:122
 msgid "Russian"
 msgstr "Русский"
 
-#: life/settings.py:121
+#: life/settings.py:123
 msgid "English"
 msgstr "Английский"
+
+#: main/apps.py:7
+msgid "Main"
+msgstr "Главная"
+
+#: main/templates/main/base.html:5
+msgid "Main page"
+msgstr "Главная страница"
+
+#: main/templates/main/base.html:5
+msgid "App name"
+msgstr "Название приложения"
+
+#: main/templates/main/index.html:6 tasks/apps.py:7 tasks/models.py:12
+#: tasks/templates/tasks/task_create.html:4
+#: tasks/templates/tasks/task_delete.html:4
+#: tasks/templates/tasks/task_detail.html:4
+#: tasks/templates/tasks/task_list.html:4
+#: tasks/templates/tasks/task_update.html:4
+msgid "Tasks"
+msgstr "Задачи"
+
+#: main/templates/widgets/change_language.html:16
+msgid "Apply"
+msgstr "Применить"
 
 #: persons/apps.py:7 persons/models.py:7
 msgid "Persons"
@@ -126,8 +148,8 @@ msgid "Position"
 msgstr "Должность"
 
 #: persons/models.py:15
-msgid "Nick"
-msgstr "Ник"
+msgid "Nickname"
+msgstr "Псевдоним"
 
 #: persons/models.py:17
 msgid "Deleted?"
@@ -169,10 +191,6 @@ msgstr "Организации"
 msgid "Address"
 msgstr "Адрес"
 
-#: tasks/apps.py:7 tasks/models.py:12
-msgid "Tasks"
-msgstr "Задачи"
-
 #: tasks/models.py:11
 msgid "Task"
 msgstr "Задача"
@@ -185,26 +203,62 @@ msgstr "Тема"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: tasks/models.py:26
+#: tasks/models.py:27
 msgid "Project"
 msgstr "Проект"
 
-#: tasks/models.py:27
+#: tasks/models.py:28
 msgid "Projects"
 msgstr "Проекты"
 
-#: tasks/models.py:30
+#: tasks/models.py:31
 msgid "Description"
 msgstr "Описание"
 
-#: tasks/models.py:50
+#: tasks/models.py:51
 msgid "Status"
 msgstr "Статус"
 
-#: tasks/models.py:51
+#: tasks/models.py:52
 msgid "Statuses"
 msgstr "Статусы"
 
-#: tasks/models.py:54
+#: tasks/models.py:55
 msgid "Closed?"
 msgstr "Закрыта?"
+
+#: tasks/templates/tasks/task_create.html:7
+msgid "Create Task"
+msgstr "Создать Задачу"
+
+#: tasks/templates/tasks/task_delete.html:7
+msgid "Delete task"
+msgstr "Удалить задачу"
+
+#: tasks/templates/tasks/task_detail.html:9 tasks/views.py:61
+msgid "Delete"
+msgstr "Удалить"
+
+#: tasks/templates/tasks/task_list.html:7
+msgid "Create task"
+msgstr "Создать задачу"
+
+#: tasks/templates/tasks/task_list.html:12 tasks/views.py:45
+msgid "Update"
+msgstr "Редактировать"
+
+#: tasks/templates/tasks/task_update.html:7
+msgid "Update Task"
+msgstr "Редактирование Задачи"
+
+#: tasks/views.py:28
+msgid "Create"
+msgstr "Создать"
+
+#: tasks/views.py:50
+msgid "Task updated!"
+msgstr "Задача обновлена!"
+
+#: tasks/views.py:66
+msgid "Task deleted!"
+msgstr "Задача удалена!"

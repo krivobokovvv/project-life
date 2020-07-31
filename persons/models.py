@@ -51,7 +51,7 @@ class ContactType(models.Model):
 class Company(models.Model):
 	class Meta:
 		verbose_name = _('Company')
-		verbose_name = _('Companies')
+		verbose_name_plural = _('Companies')
 
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	address = models.CharField(verbose_name=_('Address'), max_length=150, blank=True, null=True)

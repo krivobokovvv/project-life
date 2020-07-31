@@ -38,6 +38,7 @@ class Page(models.Model):
 		verbose_name_plural = _('Pages')
 
 		unique_together = ('chapter', 'number')
+		ordering = ['chapter', 'number']
 
 	chapter = models.ForeignKey('Chapter', verbose_name=_('Chapter'), on_delete=models.CASCADE)
 	number = models.IntegerField(verbose_name=_('Number'))
@@ -45,7 +46,7 @@ class Page(models.Model):
 
 	def __str__(self):
 		page_test = _('Page')
-		return f'{self.chapter.name} / {page_test}. {self.number}'
+		return f'{self.chapter.book} / {self.chapter} / {page_test} {self.number}'
 
 
 class Tag(models.Model):

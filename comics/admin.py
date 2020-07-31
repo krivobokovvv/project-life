@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
+from sorl.thumbnail.admin import AdminImageMixin
 
 from .models import Book, Chapter, Page, Tag
 
@@ -19,7 +20,7 @@ class ChapterAdmin(admin.ModelAdmin):
 
 
 @admin.register(Page)
-class PageAdmin(admin.ModelAdmin):
+class PageAdmin(AdminImageMixin, admin.ModelAdmin):
 	list_display = ('id', 'chapter', 'number', 'image')
 	list_filter = ('chapter',)
 

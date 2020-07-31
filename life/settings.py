@@ -43,7 +43,9 @@ INSTALLED_APPS = [
 	'django_extensions',
 	'sorl.thumbnail',
 	'colorfield',
+	'bootstrap4',
 
+	'main',
 	'bookkeeping',
 	'comics',
 	'persons',

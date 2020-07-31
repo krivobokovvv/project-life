@@ -1,0 +1,7 @@
+{% extends 'main/base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+    <a href="{% url 'task-list' %}">{% trans 'Tasks' %}</a>
+{% endblock %}

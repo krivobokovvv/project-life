@@ -16,6 +16,7 @@ class Task(models.Model):
 	tags = models.ManyToManyField('Tag', blank=True)
 	persons = models.ManyToManyField(Person, blank=True)
 	status = models.ForeignKey('Status', on_delete=models.PROTECT)
+	project = models.ForeignKey('Project', on_delete=models.PROTECT)
 
 	def __str__(self):
 		return self.subject

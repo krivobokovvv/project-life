@@ -4,7 +4,6 @@ from django.conf.urls import url
 
 from .views import *
 
-
 urlpatterns = (
 	path('task/', TasksListView.as_view(), name='task-list'),
 	path('task/create/', TaskCreateView.as_view(), name='task-create'),

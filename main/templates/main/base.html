@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% block title %}{% trans 'Main page' %}{% endblock %} - {% trans 'App name' %}</title>
-	{% bootstrap_css %}
-	{% bootstrap_javascript jquery='full' %}
+    <title>{% block title %}{% trans 'Main page' %}{% endblock %} - {% trans 'App name' %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
 </head>
 
 <body>
-	<div class="container">
-		{% include 'widgets/change_language.html' %}
-		{% bootstrap_messages %}
+<div class="container">
+    {% include 'widgets/change_language.html' %}
+    {% bootstrap_messages %}
 
-		{% block content %}
-		{% endblock %}
-	<div>
+    {% block content %}
+    {% endblock %}
+    <div>
 </body>
 
 </html>

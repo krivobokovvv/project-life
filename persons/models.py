@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 class Person(models.Model):
 	class Meta:
 		verbose_name = _('Person')
@@ -29,7 +30,7 @@ class Contact(models.Model):
 		verbose_name_plural = _('Contacts')
 
 	person = models.ForeignKey('Person', on_delete=models.PROTECT)
-	contact_type = models.ForeignKey('ContactType',on_delete=models.PROTECT)
+	contact_type = models.ForeignKey('ContactType', on_delete=models.PROTECT)
 	value = models.CharField(verbose_name=_('Value'), max_length=100)
 
 	def __str__(self):
@@ -40,7 +41,7 @@ class ContactType(models.Model):
 	class Meta:
 		verbose_name = _('Contact type')
 		verbose_name_plural = _('Contact types')
-	
+
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100, blank=True, null=True)
 

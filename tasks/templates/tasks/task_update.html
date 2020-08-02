@@ -4,12 +4,12 @@
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-<h2>{% trans 'Update Task' %}</h2>
+    <h2>{% trans 'Update Task' %}</h2>
 
-<form method="POST" enctype "multipart/form-data">
+    <form method="POST" enctype "multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form form layout='horizontal' %}
 
     {% buttons submit_message_button %}{% endbuttons %}
-</form>
+    </form>
 {% endblock %}

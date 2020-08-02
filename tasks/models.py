@@ -50,7 +50,7 @@ class Status(models.Model):
 	class Meta:
 		verbose_name = _('Status')
 		verbose_name_plural = _('Statuses')
-	
+
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
 	closed = models.BooleanField(verbose_name=_('Closed?'), default=False)
 

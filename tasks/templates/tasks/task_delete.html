@@ -4,9 +4,9 @@
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-<h2>{% trans 'Delete task' %} "{{ task.subject }}"</h2>
-<form method="post">
-    {% csrf_token %}
-    {% buttons submit_message_button button_class='btn-danger' %}{% endbuttons %}
-</form>
+    <h2>{% trans 'Delete task' %} "{{ task.subject }}"</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% buttons submit_message_button button_class='btn-danger' %}{% endbuttons %}
+    </form>
 {% endblock %}

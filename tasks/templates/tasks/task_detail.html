@@ -4,8 +4,8 @@
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-<p>{{ task.project }}</p>
-<a href="{% url 'task-delete' task.id %}" style="color:red">
-    <button type="button" class="btn btn-danger">{% trans 'Delete' %}</button>
-</a>
+    <p>{{ task.project }}</p>
+    <a href="{% url 'task-delete' task.id %}" style="color:red">
+        <button type="button" class="btn btn-danger">{% trans 'Delete' %}</button>
+    </a>
 {% endblock %}

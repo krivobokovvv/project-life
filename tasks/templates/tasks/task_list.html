@@ -4,15 +4,16 @@
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-<a href="{% url 'task-create' %}">{% trans 'Create task'%}</a>
-<ul>
-    {% for task in object_list %}
-        <li>
-            <a href="{% url 'task-detail' task.id %}">{{ task.project }} - {{ task.subject }} ({{ task.status }})</a> 
-            <a href="{% url 'task-update' task.id %}">{% trans 'Update' %}</a>
-        </li>
-    {% endfor %}
-</ul>
+    <a href="{% url 'task-create' %}">{% trans 'Create task' %}</a>
+    <ul>
+        {% for task in object_list %}
+            <li>
+                <a href="{% url 'task-detail' task.id %}">{{ task.project }} - {{ task.subject }}
+                    ({{ task.status }})</a>
+                <a href="{% url 'task-update' task.id %}">{% trans 'Update' %}</a>
+            </li>
+        {% endfor %}
+    </ul>
 
-{% bootstrap_pagination page_obj %}
+    {% bootstrap_pagination page_obj %}
 {% endblock %}

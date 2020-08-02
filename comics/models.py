@@ -1,8 +1,7 @@
+from colorfield.fields import ColorField
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
 from sorl.thumbnail import ImageField
-from colorfield.fields import ColorField
 
 
 class Book(models.Model):

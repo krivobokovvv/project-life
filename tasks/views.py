@@ -1,14 +1,12 @@
-from django.shortcuts import render
-from django.utils.translation import ugettext_lazy as _
-from django.views.generic.base import View, TemplateView
-from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic.detail import DetailView
-from django.urls import reverse_lazy
 from django.contrib import messages
+from django.urls import reverse_lazy
+from django.utils.translation import ugettext_lazy as _
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
 
-from .models import Task
 from .forms import CreateTaskUserForm, UpdateTaskForm
+from .models import Task
 
 
 class TasksListView(ListView):

@@ -51,7 +51,7 @@ class Status(models.Model):
 		verbose_name_plural = _('Statuses')
 
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
-	closed = models.BooleanField(verbose_name=_('Closed?'), default=False)
+	is_closed = models.BooleanField(verbose_name=_('Closed?'), default=False)
 
 	def __str__(self):
 		return self.name

@@ -25,6 +25,6 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(Status)
 class StatusAdmin(admin.ModelAdmin):
-	list_display = ('id', 'name', 'closed')
-	list_filter = ('closed',)
+	list_display = ('id', 'name', 'is_closed')
+	list_filter = ('is_closed',)
 	search_fields = ('name',)

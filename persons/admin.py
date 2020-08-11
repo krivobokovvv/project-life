@@ -14,9 +14,9 @@ class PersonAdmin(admin.ModelAdmin):
 		'birthday',
 		'company',
 		'position',
-		'deleted',
+		'is_deleted',
 	)
-	list_filter = ('birthday', 'company', 'deleted')
+	list_filter = ('birthday', 'company', 'is_deleted')
 
 
 @admin.register(Contact)

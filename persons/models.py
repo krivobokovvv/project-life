@@ -15,7 +15,7 @@ class Person(models.Model):
 	position = models.CharField(verbose_name=_('Position'), max_length=100, blank=True, null=True)
 	nickname = models.CharField(verbose_name=_('Nickname'), max_length=30, blank=True, null=True)
 
-	deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
+	is_deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
 
 	def __str__(self):
 		if self.nickname is not None:

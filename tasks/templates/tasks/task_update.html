@@ -10,6 +10,6 @@
     {% csrf_token %}
     {% bootstrap_form form layout='horizontal' %}
 
-    {% buttons submit_message_button %}{% endbuttons %}
+    {% buttons submit=submit_message_button %}{% endbuttons %}
     </form>
 {% endblock %}

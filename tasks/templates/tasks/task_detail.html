@@ -8,4 +8,7 @@
     <a href="{% url 'task-delete' task.id %}" style="color:red">
         <button type="button" class="btn btn-danger">{% trans 'Delete' %}</button>
     </a>
+    <a href="{% url 'task-update' task.id %}">
+        <button type="button" class="btn">{% trans 'Update' %}
+    </a>
 {% endblock %}

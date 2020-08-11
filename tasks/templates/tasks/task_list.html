@@ -10,7 +10,6 @@
             <li>
                 <a href="{% url 'task-detail' task.id %}">{{ task.project }} - {{ task.subject }}
                     ({{ task.status }})</a>
-                <a href="{% url 'task-update' task.id %}">{% trans 'Update' %}</a>
             </li>
         {% endfor %}
     </ul>

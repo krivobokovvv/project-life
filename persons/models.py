@@ -8,12 +8,12 @@ class Person(models.Model):
 		verbose_name_plural = _('Persons')
 
 	first_name = models.CharField(verbose_name=_('First name'), max_length=100)
-	middle_name = models.CharField(verbose_name=_('Middle name'), max_length=100, blank=True, null=True)
-	last_name = models.CharField(verbose_name=_('Last name'), max_length=100, blank=True, null=True)
+	middle_name = models.CharField(verbose_name=_('Middle name'), max_length=100)
+	last_name = models.CharField(verbose_name=_('Last name'), max_length=100)
 	birthday = models.DateField(verbose_name=_('Birthday'), blank=True, null=True)
 	company = models.ForeignKey('Company', on_delete=models.PROTECT, blank=True, null=True)
-	position = models.CharField(verbose_name=_('Position'), max_length=100, blank=True, null=True)
-	nickname = models.CharField(verbose_name=_('Nickname'), max_length=30, blank=True, null=True)
+	position = models.CharField(verbose_name=_('person', 'Position'), max_length=100)
+	nickname = models.CharField(verbose_name=_('Nickname'), max_length=30)
 
 	is_deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
 
@@ -43,7 +43,7 @@ class ContactType(models.Model):
 		verbose_name_plural = _('Contact types')
 
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
-	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100, blank=True, null=True)
+	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100)
 
 	def __str__(self):
 		return self.name
@@ -55,7 +55,7 @@ class Company(models.Model):
 		verbose_name_plural = _('Companies')
 
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
-	address = models.CharField(verbose_name=_('Address'), max_length=150, blank=True, null=True)
+	address = models.CharField(verbose_name=_('Address'), max_length=150)
 
 	def __str__(self):
 		return self.name

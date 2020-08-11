@@ -10,7 +10,7 @@ class Book(models.Model):
 		verbose_name_plural = _('Books')
 
 	name = models.CharField(verbose_name=_('Title'), max_length=200)
-	author = models.CharField(verbose_name=_('Author'), max_length=200, blank=True, null=True)
+	author = models.CharField(verbose_name=_('Author'), max_length=200)
 	tags = models.ManyToManyField('Tag', blank=True)
 	preview = models.ForeignKey('Page', verbose_name=_('Preview'), on_delete=models.SET_NULL, blank=True, null=True)
 

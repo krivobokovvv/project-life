@@ -12,10 +12,10 @@ class Task(models.Model):
 
 	subject = models.CharField(verbose_name=_('Subject'), max_length=100)
 	description = models.TextField(verbose_name=_('Comment'))
-	tags = models.ManyToManyField('Tag', blank=True)
+	tags = models.ManyToManyField('Tag', verbose_name=_('Tags'), blank=True)
 	persons = models.ManyToManyField(Person, blank=True)
-	status = models.ForeignKey('Status', on_delete=models.PROTECT)
-	project = models.ForeignKey('Project', on_delete=models.PROTECT)
+	status = models.ForeignKey('Status', verbose_name=_('Status'), on_delete=models.PROTECT)
+	project = models.ForeignKey('Project', verbose_name=_('Project'), on_delete=models.PROTECT)
 
 	def __str__(self):
 		return self.subject
@@ -39,7 +39,7 @@ class Tag(models.Model):
 		verbose_name_plural = _('Tags')
 
 	name = models.CharField(verbose_name=_('Name'), max_length=50)
-	color = ColorField(default='#FFFFFF')
+	color = ColorField(verbose_name=_('Color'), default='#FFFFFF')
 
 	def __str__(self):
 		return self.name

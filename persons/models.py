@@ -3,10 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Person(models.Model):
-	class Meta:
-		verbose_name = _('Person')
-		verbose_name_plural = _('Persons')
-
 	first_name = models.CharField(verbose_name=_('First name'), max_length=100)
 	middle_name = models.CharField(verbose_name=_('Middle name'), max_length=100)
 	last_name = models.CharField(verbose_name=_('Last name'), max_length=100)
@@ -17,6 +13,10 @@ class Person(models.Model):
 
 	is_deleted = models.BooleanField(verbose_name=_('Deleted?'), default=False)
 
+	class Meta:
+		verbose_name = _('Person')
+		verbose_name_plural = _('Persons')
+
 	def __str__(self):
 		if self.nickname is not None:
 			return self.nickname
@@ -25,13 +25,13 @@ class Person(models.Model):
 
 
 class Contact(models.Model):
-	class Meta:
-		verbose_name = _('Contact')
-		verbose_name_plural = _('Contacts')
-
 	person = models.ForeignKey('Person', on_delete=models.PROTECT)
 	contact_type = models.ForeignKey('ContactType', on_delete=models.PROTECT)
 	value = models.CharField(verbose_name=_('Value'), max_length=100)
+
+	class Meta:
+		verbose_name = _('Contact')
+		verbose_name_plural = _('Contacts')
 
 	def __str__(self):
 		return f'{self.contact_type}: {self.value}'

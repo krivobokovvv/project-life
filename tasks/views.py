@@ -44,8 +44,7 @@ class TaskUpdateView(UpdateView):
 		return context
 
 	def post(self, request, *args, **kwargs):
-		messages.add_message(request, messages.SUCCESS,
-							 _('Task updated!'))
+		messages.add_message(request, messages.SUCCESS, _('Task updated!'))
 		return super().post(request, *args, **kwargs)
 
 
@@ -60,6 +59,5 @@ class TaskDeleteView(DeleteView):
 		return context
 
 	def post(self, request, *args, **kwargs):
-		messages.add_message(request, messages.SUCCESS,
-							 _('Task deleted!'))
+		messages.add_message(request, messages.SUCCESS, _('Task deleted!'))
 		return super().post(request, *args, **kwargs)

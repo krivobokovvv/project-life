@@ -38,24 +38,24 @@ class Contact(models.Model):
 
 
 class ContactType(models.Model):
+	name = models.CharField(verbose_name=_('Name'), max_length=100)
+	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100)
+
 	class Meta:
 		verbose_name = _('Contact type')
 		verbose_name_plural = _('Contact types')
-
-	name = models.CharField(verbose_name=_('Name'), max_length=100)
-	regex = models.CharField(verbose_name=_('Regular expression'), max_length=100)
 
 	def __str__(self):
 		return self.name
 
 
 class Company(models.Model):
+	name = models.CharField(verbose_name=_('Name'), max_length=100)
+	address = models.CharField(verbose_name=_('Address'), max_length=150)
+
 	class Meta:
 		verbose_name = _('Company')
 		verbose_name_plural = _('Companies')
-
-	name = models.CharField(verbose_name=_('Name'), max_length=100)
-	address = models.CharField(verbose_name=_('Address'), max_length=150)
 
 	def __str__(self):
 		return self.name

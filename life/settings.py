@@ -131,7 +131,14 @@ LOCALE_PATHS = (
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
+
+TIME_FORMAT = 'H:i:s'
+DATE_FORMAT = 'd F Y'
+DATETIME_FORMAT = 'd F Y H:i:s'
+SHORT_DATE_FORMAT = 'd.m.Y'
+SHORT_DATETIME_FORMAT = 'd.m.Y H:i:s'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

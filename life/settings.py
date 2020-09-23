@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 	'bootstrap4',
 	'debug_toolbar',
 
+	'generic',
 	'main',
 	'bookkeeping',
 	'comics',

@@ -6,7 +6,7 @@ from sorl.thumbnail import ImageField
 
 class Book(models.Model):
 	name = models.CharField(verbose_name=_('Title'), max_length=200)
-	author = models.CharField(verbose_name=_('Author'), max_length=200)
+	author = models.CharField(verbose_name=_('Author'), max_length=200, blank=True)
 	tags = models.ManyToManyField('Tag', blank=True)
 	preview = models.ForeignKey('Page', verbose_name=_('Preview'), on_delete=models.SET_NULL, blank=True, null=True)
 

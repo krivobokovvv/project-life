@@ -112,20 +112,24 @@ def as_table(model):
             raise Exception()
         elif field.many_to_one:
             r = getattr(model, f'{field.name}')
-            ret += f'<tr><td class="name">{field.verbose_name}</td><td class="field"><a href="{r.get_admin_url()}">{r}</a></td></td>'
+            ret += f'<tr><td class="name">{field.verbose_name}</td><td class="field"><a href="{r.get_admin_url()}">' + \
+                   f'{r}</a></td></td>'
         elif field.many_to_many:
             res = getattr(model, field.name).all()
             first = True
             for r in res:
                 if first:
-                    ret += f'<tr><td class="name" rowspan={res.__len__()} style="vertical-align:middle">{r._meta.verbose_name}</td><td class="field"><a href="{r.get_admin_url()}">{r}</a></td></tr>'
+                    ret += f'<tr><td class="name" rowspan={res.__len__()} style="vertical-align:middle">' + \
+                           f'{r._meta.verbose_name}</td><td class="field"><a href="{r.get_admin_url()}">{r}</a>' + \
+                           '</td></tr>'
                     first = False
                 else:
                     ret += f'<tr><td class="field"><a href="{r.get_admin_url()}">{r}</a></td></tr>'
         else:
             r = getattr(model, field.name)
             if isinstance(r, datetime.datetime):
-                ret += f'<tr><td class="name">{field.verbose_name}</td><td class="field">{r}<br/>{naturaltime(r)}</td></td>'
+                ret += f'<tr><td class="name">{field.verbose_name}</td><td class="field">{r}<br/>{naturaltime(r)}' + \
+                       '</td></td>'
             else:
                 ret += f'<tr><td class="name">{field.verbose_name}</td><td class="field">{r}</td></td>'
     return mark_safe(ret)

@@ -26,7 +26,8 @@ class Task(Model, DateTimeMixin):
 class Project(Model):
 	name = models.CharField(verbose_name=_('Name'), max_length=100)
 	description = models.TextField(verbose_name=_('Description'), blank=True)
-	parent = models.ForeignKey('self', verbose_name=_('Parent project'), blank=True, null=True, on_delete=models.DO_NOTHING)
+	parent = models.ForeignKey('self', verbose_name=_('Parent project'), blank=True, null=True,
+								on_delete=models.DO_NOTHING)
 
 	class Meta:
 		verbose_name = _('Project')

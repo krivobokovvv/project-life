@@ -149,6 +149,37 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s: %(message)s',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
+
+if DEBUG is True:
+    LOGGING['handlers']['console'] = {
+        'class': 'logging.StreamHandler',
+        'formatter': 'verbose',
+    }
+    LOGGING['loggers']['django']['handlers'].append('console')
+
 INTERNAL_IPS = [
 	'127.0.0.1',
 ]

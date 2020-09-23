@@ -27,7 +27,7 @@ TIME_STRINGS = {
 TIMESINCE_CHUNKS = (
     (60 * 60 * 24 * 365, 'year'),
     (60 * 60 * 24 * 30, 'month'),
-    #(60 * 60 * 24 * 7, 'week'),
+    # (60 * 60 * 24 * 7, 'week'),
     (60 * 60 * 24, 'day'),
     (60 * 60, 'hour'),
     (60, 'minute'),
@@ -42,7 +42,6 @@ def naturaltime(d, now=None, time_strings=None, depth=2):
         raise ValueError('depth must be greater than 0.')
     # Convert datetime.date to datetime.datetime for comparison.
     if not isinstance(d, datetime.datetime):
-        #print(type(d))
         d = datetime.datetime(d.year, d.month, d.day)
     if now and not isinstance(now, datetime.datetime):
         if isinstance(now, datetime.datetime):

@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-{% load i18n bootstrap4 %}
+{% load i18n bootstrap4 main_tags %}
 
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
@@ -8,8 +8,8 @@
     <ul>
         {% for task in object_list %}
             <li>
-                <a href="{% url 'task-detail' task.id %}">{{ task.project }} - {{ task.subject }}
-                    ({{ task.status }})</a>
+                <a href="{% url 'task-detail' task.id %}">#{{ task.id }} {{ task.project }} - {{ task.subject }}
+                    ({{ task.status }}) ({{ task.change_time|naturaltime }})</a>
             </li>
         {% endfor %}
     </ul>

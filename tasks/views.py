@@ -1,9 +1,18 @@
 from django.contrib import messages
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _, ngettext_lazy, gettext
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
+
+import calendar
+import datetime
+
+from django.utils.html import avoid_wrapping
+from django.utils.timezone import is_aware, utc
+
+from main.templatetags.main_tags import naturaltime
+
 
 from .forms import CreateTaskUserForm, UpdateTaskForm
 from .models import Task
@@ -11,36 +20,39 @@ from .models import Task
 
 class TasksListView(ListView):
 	model = Task
-	template_name = "tasks/task_list.html"
 	paginate_by = 10
 
 
 class TaskCreateView(CreateView):
 	model = Task
-	template_name = "tasks/task_create.html"
 	form_class = CreateTaskUserForm
 	success_url = reverse_lazy('task-list')
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['submit_message_button'] = _('Create')
+		context['reset_message_button'] = _('Reset')
 		return context
 
 
 class TaskDetailView(DetailView):
 	model = Task
-	template_name = "tasks/task_detail.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['create_time'] = naturaltime(context['task'].create_time)
+		return context
 
 
 class TaskUpdateView(UpdateView):
 	model = Task
-	template_name = "tasks/task_update.html"
 	form_class = UpdateTaskForm
 	success_url = reverse_lazy('task-list')
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		context['submit_message_button'] = _('Update')
+		context['submit_message_button'] = _('Apply')
+		context['reset_message_button'] = _('Reset')
 		return context
 
 	def post(self, request, *args, **kwargs):
@@ -50,7 +62,6 @@ class TaskUpdateView(UpdateView):
 
 class TaskDeleteView(DeleteView):
 	model = Task
-	template_name = "tasks/task_delete.html"
 	success_url = reverse_lazy('task-list')
 
 	def get_context_data(self, **kwargs):

@@ -114,3 +114,7 @@ media/
 
 # PyCharm
 .idea/
+/static/admin/*
+/static/debug_toolbar/*
+/static/colorfield/*
+/static/django_extensions/*

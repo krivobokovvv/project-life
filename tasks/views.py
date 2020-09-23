@@ -1,18 +1,11 @@
 from django.contrib import messages
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _, ngettext_lazy, gettext
+from django.utils.translation import gettext_lazy as _
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 
-import calendar
-import datetime
-
-from django.utils.html import avoid_wrapping
-from django.utils.timezone import is_aware, utc
-
 from main.templatetags.main_tags import naturaltime
-
 
 from .forms import CreateTaskUserForm, UpdateTaskForm
 from .models import Task

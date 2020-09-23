@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Task, Tag
+from .models import Task
 
 
 class CreateTaskUserForm(forms.ModelForm):

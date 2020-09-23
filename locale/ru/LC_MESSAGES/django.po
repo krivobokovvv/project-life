@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-31 12:11+0300\n"
+"POT-Creation-Date: 2020-09-01 16:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: \n"
@@ -17,80 +17,88 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: comics/apps.py:6
+#: comics/apps.py:7
 msgid "Comics"
 msgstr "Комиксы"
 
-#: comics/models.py:10 comics/models.py:27
-msgid "Book"
-msgstr "Книга"
-
-#: comics/models.py:11
-msgid "Books"
-msgstr "Книги"
-
-#: comics/models.py:13 comics/models.py:28
+#: comics/models.py:8 comics/models.py:23
 msgid "Title"
 msgstr "Название"
 
-#: comics/models.py:14
+#: comics/models.py:9
 msgid "Author"
 msgstr "Автор"
 
-#: comics/models.py:16
+#: comics/models.py:11
 msgid "Preview"
 msgstr "Превью"
 
-#: comics/models.py:24 comics/models.py:43
-msgid "Chapter"
-msgstr "Раздел"
+#: comics/models.py:14 comics/models.py:22
+msgid "Book"
+msgstr "Книга"
 
-#: comics/models.py:25
-msgid "Chapters"
-msgstr "Разделы"
+#: comics/models.py:15
+msgid "Books"
+msgstr "Книги"
 
-#: comics/models.py:29
+#: comics/models.py:24
 msgid "Count page"
 msgstr "Количество страниц"
 
-#: comics/models.py:37 comics/models.py:48
-msgid "Page"
-msgstr "Страница"
+#: comics/models.py:27 comics/models.py:35
+msgid "Chapter"
+msgstr "Раздел"
 
-#: comics/models.py:38
-msgid "Pages"
-msgstr "Страницы"
+#: comics/models.py:28
+msgid "Chapters"
+msgstr "Разделы"
 
-#: comics/models.py:44
+#: comics/models.py:36
 msgid "Number"
 msgstr "Номер"
 
-#: comics/models.py:45
+#: comics/models.py:37
 msgid "Image"
 msgstr "Изображение"
 
-#: comics/models.py:54 tasks/models.py:39
-msgid "Tag"
-msgstr "Тег"
+#: comics/models.py:40 comics/models.py:47
+msgid "Page"
+msgstr "Страница"
 
-#: comics/models.py:55 tasks/models.py:40
-msgid "Tags"
-msgstr "Теги"
+#: comics/models.py:41
+msgid "Pages"
+msgstr "Страницы"
 
-#: comics/models.py:57 persons/models.py:44 persons/models.py:56
-#: tasks/models.py:30 tasks/models.py:42 tasks/models.py:54
+#: comics/models.py:52 persons/models.py:43 persons/models.py:55
+#: tasks/models.py:26 tasks/models.py:38 tasks/models.py:50
 msgid "Name"
 msgstr "Имя"
 
-#: comics/models.py:58
+#: comics/models.py:53 tasks/models.py:39
 msgid "Color"
 msgstr "Цвет"
 
-#: life/settings.py:122
+#: comics/models.py:56 tasks/models.py:42
+msgid "Tag"
+msgstr "Тег"
+
+#: comics/models.py:57 tasks/models.py:12 tasks/models.py:43
+msgid "Tags"
+msgstr "Теги"
+
+#: generic/models.py:17
+msgid "Created time"
+msgstr "Время создания"
+
+#: generic/models.py:18
+msgid "Change time"
+msgstr "Время изменения"
+
+#: life/settings.py:132
 msgid "Russian"
 msgstr "Русский"
 
-#: life/settings.py:123
+#: life/settings.py:133
 msgid "English"
 msgstr "Английский"
 
@@ -106,159 +114,248 @@ msgstr "Главная страница"
 msgid "App name"
 msgstr "Название приложения"
 
-#: main/templates/main/index.html:6 tasks/apps.py:7 tasks/models.py:12
+#: main/templates/main/index.html:6 tasks/apps.py:7 tasks/models.py:19
+#: tasks/templates/tasks/task_confirm_delete.html:4
 #: tasks/templates/tasks/task_create.html:4
-#: tasks/templates/tasks/task_delete.html:4
 #: tasks/templates/tasks/task_detail.html:4
+#: tasks/templates/tasks/task_form.html:4
 #: tasks/templates/tasks/task_list.html:4
-#: tasks/templates/tasks/task_update.html:4
 msgid "Tasks"
 msgstr "Задачи"
 
-#: main/templates/widgets/change_language.html:16
+#: main/templates/widgets/change_language.html:16 tasks/views.py:71
 msgid "Apply"
 msgstr "Применить"
 
-#: persons/apps.py:7 persons/models.py:7
+#: main/templatetags/main_tags.py:16
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d год"
+msgstr[1] "%d года"
+msgstr[2] "%d лет"
+msgstr[3] "%d лет"
+
+#: main/templatetags/main_tags.py:17
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d месяц"
+msgstr[1] "%d месяца"
+msgstr[2] "%d месяцев"
+msgstr[3] "%d месяцев"
+
+#: main/templatetags/main_tags.py:18
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d неделю"
+msgstr[1] "%d недели"
+msgstr[2] "%d недель"
+msgstr[3] "%d недель"
+
+#: main/templatetags/main_tags.py:19
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дня"
+msgstr[2] "%d дней"
+msgstr[3] "%d дней"
+
+#: main/templatetags/main_tags.py:20
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d час"
+msgstr[1] "%d часа"
+msgstr[2] "%d часов"
+msgstr[3] "%d часов"
+
+#: main/templatetags/main_tags.py:21
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
+msgstr[3] "%d минут"
+
+#: main/templatetags/main_tags.py:22
+#, python-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d секунду"
+msgstr[1] "%d секунды"
+msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
+
+#: main/templatetags/main_tags.py:23
+#, python-format
+msgid "%s ago"
+msgstr "%s назад"
+
+#: main/templatetags/main_tags.py:24
+#, python-format
+msgid "%s from now"
+msgstr "через %s"
+
+#: main/templatetags/main_tags.py:84
+msgid "now"
+msgstr "сейчас"
+
+#: main/templatetags/main_tags.py:86
+msgid ", "
+msgstr ", "
+
+#: persons/apps.py:7 persons/models.py:20
 msgid "Persons"
 msgstr "Люди"
 
-#: persons/models.py:6
-msgid "Person"
-msgstr "Персона"
-
-#: persons/models.py:9
+#: persons/models.py:8
 msgid "First name"
 msgstr "Имя"
 
-#: persons/models.py:10
+#: persons/models.py:9
 msgid "Middle name"
 msgstr "Отчество"
 
-#: persons/models.py:11
+#: persons/models.py:10
 msgid "Last name"
 msgstr "Фамилия"
 
-#: persons/models.py:12
+#: persons/models.py:11
 msgid "Birthday"
 msgstr "День рождения"
 
-#: persons/models.py:14
+#: persons/models.py:13
 msgid "Position"
 msgstr "Должность"
 
-#: persons/models.py:15
+#: persons/models.py:14
 msgid "Nickname"
 msgstr "Псевдоним"
 
-#: persons/models.py:17
+#: persons/models.py:16
 msgid "Deleted?"
 msgstr "Удалено?"
 
-#: persons/models.py:28
-msgid "Contact"
-msgstr "Контакт"
+#: persons/models.py:19
+msgid "Person"
+msgstr "Персона"
 
-#: persons/models.py:29
-msgid "Contacts"
-msgstr "Контакты"
-
-#: persons/models.py:33
+#: persons/models.py:32 tasks/templates/tasks/task_detail.html:18
 msgid "Value"
 msgstr "Значение"
 
-#: persons/models.py:41
-msgid "Contact type"
-msgstr "Тип контакта"
+#: persons/models.py:35
+msgid "Contact"
+msgstr "Контакт"
 
-#: persons/models.py:42
-msgid "Contact types"
-msgstr "Типы контактов"
+#: persons/models.py:36
+msgid "Contacts"
+msgstr "Контакты"
 
-#: persons/models.py:45
+#: persons/models.py:44
 msgid "Regular expression"
 msgstr "Регулярное выражение"
 
-#: persons/models.py:53
-msgid "Company"
-msgstr "Организация"
+#: persons/models.py:47
+msgid "Contact type"
+msgstr "Тип контакта"
 
-#: persons/models.py:54
-msgid "Companies"
-msgstr "Организации"
+#: persons/models.py:48
+msgid "Contact types"
+msgstr "Типы контактов"
 
-#: persons/models.py:57
+#: persons/models.py:56
 msgid "Address"
 msgstr "Адрес"
 
-#: tasks/models.py:11
-msgid "Task"
-msgstr "Задача"
+#: persons/models.py:59
+msgid "Company"
+msgstr "Организация"
 
-#: tasks/models.py:14
+#: persons/models.py:60
+msgid "Companies"
+msgstr "Организации"
+
+#: tasks/models.py:10
 msgid "Subject"
 msgstr "Тема"
 
-#: tasks/models.py:15
+#: tasks/models.py:11
 msgid "Comment"
 msgstr "Комментарий"
 
-#: tasks/models.py:27
-msgid "Project"
-msgstr "Проект"
-
-#: tasks/models.py:28
-msgid "Projects"
-msgstr "Проекты"
-
-#: tasks/models.py:31
-msgid "Description"
-msgstr "Описание"
-
-#: tasks/models.py:51
+#: tasks/models.py:14 tasks/models.py:54
 msgid "Status"
 msgstr "Статус"
 
-#: tasks/models.py:52
+#: tasks/models.py:15 tasks/models.py:30
+msgid "Project"
+msgstr "Проект"
+
+#: tasks/models.py:18
+msgid "Task"
+msgstr "Задача"
+
+#: tasks/models.py:27
+msgid "Description"
+msgstr "Описание"
+
+#: tasks/models.py:31
+msgid "Projects"
+msgstr "Проекты"
+
+#: tasks/models.py:51
+msgid "Closed?"
+msgstr "Закрыта?"
+
+#: tasks/models.py:55
 msgid "Statuses"
 msgstr "Статусы"
 
-#: tasks/models.py:55
-msgid "Closed?"
-msgstr "Закрыта?"
+#: tasks/templates/tasks/task_confirm_delete.html:7
+msgid "Delete task"
+msgstr "Удалить задачу"
 
 #: tasks/templates/tasks/task_create.html:7
 msgid "Create Task"
 msgstr "Создать Задачу"
 
-#: tasks/templates/tasks/task_delete.html:7
-msgid "Delete task"
-msgstr "Удалить задачу"
+#: tasks/templates/tasks/task_detail.html:17
+msgid "Key"
+msgstr "Ключ"
 
-#: tasks/templates/tasks/task_detail.html:9 tasks/views.py:61
+#: tasks/templates/tasks/task_detail.html:29
+msgid "Edit"
+msgstr "Редактировать"
+
+#: tasks/templates/tasks/task_detail.html:32 tasks/views.py:86
 msgid "Delete"
 msgstr "Удалить"
+
+#: tasks/templates/tasks/task_form.html:7
+msgid "Update Task"
+msgstr "Редактирование Задачи"
 
 #: tasks/templates/tasks/task_list.html:7
 msgid "Create task"
 msgstr "Создать задачу"
 
-#: tasks/templates/tasks/task_list.html:12 tasks/views.py:45
-msgid "Update"
-msgstr "Редактировать"
-
-#: tasks/templates/tasks/task_update.html:7
-msgid "Update Task"
-msgstr "Редактирование Задачи"
-
-#: tasks/views.py:28
+#: tasks/views.py:49
 msgid "Create"
 msgstr "Создать"
 
-#: tasks/views.py:50
+#: tasks/views.py:50 tasks/views.py:72
+msgid "Reset"
+msgstr "Сброс"
+
+#: tasks/views.py:76
 msgid "Task updated!"
 msgstr "Задача обновлена!"
 
-#: tasks/views.py:66
+#: tasks/views.py:90
 msgid "Task deleted!"
 msgstr "Задача удалена!"

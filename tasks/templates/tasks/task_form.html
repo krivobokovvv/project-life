@@ -7,9 +7,9 @@
     <h2>{% trans 'Update Task' %}</h2>
 
     <form method="POST">
-    {% csrf_token %}
-    {% bootstrap_form form layout='horizontal' %}
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
 
-    {% buttons submit=submit_message_button reset=reset_message_button button_class='btn-primary' %}{% endbuttons %}
+        {% buttons submit=submit_message_button reset=reset_message_button button_class='btn-primary' %}{% endbuttons %}
     </form>
 {% endblock %}

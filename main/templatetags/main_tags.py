@@ -1,15 +1,13 @@
-from django import template
-from django.utils.safestring import mark_safe
-from django.utils.translation import gettext_lazy as _, ngettext_lazy
-
+import calendar
 import datetime
 
-import calendar
+from django import template
 from django.utils.html import avoid_wrapping
+from django.utils.safestring import mark_safe
 from django.utils.timezone import is_aware, utc
+from django.utils.translation import gettext_lazy as _, ngettext_lazy
 
 register = template.Library()
-
 
 TIME_STRINGS = {
     'year': ngettext_lazy('%d year', '%d years'),

@@ -2,8 +2,8 @@ from colorfield.fields import ColorField
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from persons.models import Person
 from generic.models import Model, DateTimeMixin
+from persons.models import Person
 
 
 class Task(Model, DateTimeMixin):

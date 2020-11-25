@@ -6,7 +6,7 @@ from generic.models import Model, DateTimeMixin
 from persons.models import Person
 
 
-class Task(Model, DateTimeMixin):
+class Task(DateTimeMixin):
     subject = models.CharField(verbose_name=_('Subject'), max_length=100)
     description = models.TextField(verbose_name=_('Comment'), blank=True)
     tags = models.ManyToManyField('Tag', verbose_name=_('Tags'), blank=True)
@@ -17,13 +17,12 @@ class Task(Model, DateTimeMixin):
     class Meta:
         verbose_name = _('Task')
         verbose_name_plural = _('Tasks')
-        ordering = ('-create_time',)
 
     def __str__(self):
         return self.subject
 
 
-class Project(Model):
+class Project(DateTimeMixin):
     name = models.CharField(verbose_name=_('Name'), max_length=100)
     description = models.TextField(verbose_name=_('Description'), blank=True)
     parent = models.ForeignKey('self', verbose_name=_('Parent project'), blank=True, null=True,

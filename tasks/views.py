@@ -11,8 +11,8 @@ from .models import Task
 
 
 class TasksListView(ListView):
-    model = Task
     paginate_by = 10
+    queryset = Task.objects.filter(status__is_closed=False).order_by('-change_time')
 
 
 class TaskCreateView(CreateView):

@@ -3,7 +3,7 @@ from django import forms
 from .models import Task
 
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Column, Row, Reset, Column, BaseInput, Button
+from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Row, Reset, Column, Button
 from crispy_forms.bootstrap import AppendedText, Alert
 
 from django.utils.translation import gettext_lazy as _
@@ -18,7 +18,8 @@ class TaskForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            Alert(content="<strong>Warning!</strong> Best check yo self, you're not looking too good.", css_class='alert-warning'),
+            Alert(content="<strong>Warning!</strong> Best check yo self, you're not looking too good.",
+                  css_class='alert-warning'),
             Fieldset(
                 _('Main'),
                 Row(

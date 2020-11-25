@@ -5,7 +5,6 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 
-from main.templatetags.main_tags import naturaltime
 from .forms import TaskForm
 from .models import Task
 

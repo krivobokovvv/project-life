@@ -6,7 +6,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 
 from main.templatetags.main_tags import naturaltime
-from .forms import CreateTaskUserForm, UpdateTaskForm
+from .forms import TaskForm
 from .models import Task
 
 
@@ -17,13 +17,12 @@ class TasksListView(ListView):
 
 class TaskCreateView(CreateView):
     model = Task
-    form_class = CreateTaskUserForm
+    form_class = TaskForm
     success_url = reverse_lazy('task-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['submit_message_button'] = _('Create')
-        context['reset_message_button'] = _('Reset')
+        context['title'] = _('Create task')
         return context
 
 
@@ -32,19 +31,17 @@ class TaskDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['create_time'] = naturaltime(context['task'].create_time)
         return context
 
 
 class TaskUpdateView(UpdateView):
     model = Task
-    form_class = UpdateTaskForm
+    form_class = TaskForm
     success_url = reverse_lazy('task-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['submit_message_button'] = _('Apply')
-        context['reset_message_button'] = _('Reset')
+        context['title'] = _('Update task')
         return context
 
     def post(self, request, *args, **kwargs):
@@ -58,7 +55,6 @@ class TaskDeleteView(DeleteView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['submit_message_button'] = _('Delete')
         return context
 
     def post(self, request, *args, **kwargs):

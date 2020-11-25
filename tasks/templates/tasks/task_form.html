@@ -1,15 +1,12 @@
 {% extends 'main/base.html' %}
-{% load i18n bootstrap4 %}
+{% load i18n bootstrap4 crispy_forms_tags%}
 
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-    <h2>{% trans 'Update Task' %}</h2>
+    <h2>{{ title }}</h2>
 
     <form method="POST">
-        {% csrf_token %}
-        {% bootstrap_form form layout='horizontal' %}
-
-        {% buttons submit=submit_message_button reset=reset_message_button button_class='btn-primary' %}{% endbuttons %}
+        {% crispy form %}
     </form>
 {% endblock %}

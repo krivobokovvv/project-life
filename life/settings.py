@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'colorfield',
     'bootstrap4',
     'debug_toolbar',
+    'crispy_forms',
 
     'generic',
     'main',
@@ -178,6 +179,9 @@ if DEBUG:
         'formatter': 'verbose',
     }
     LOGGING['loggers']['django']['handlers'].append('console')
+
+# Django Crispy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Django Debug Toolbar
 INTERNAL_IPS = [

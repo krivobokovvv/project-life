@@ -118,3 +118,6 @@ media/
 /static/debug_toolbar/*
 /static/colorfield/*
 /static/django_extensions/*
+
+# STATIC_ROOT folder
+/static/*

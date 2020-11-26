@@ -205,6 +205,7 @@ DEBUG_TOOLBAR_PANELS = [
 ]
 
 DEBUG_TOOLBAR_CONFIG = {
+    # Toolbar options
     'DISABLE_PANELS': {
         'debug_toolbar.panels.versions.VersionsPanel',
         'debug_toolbar.panels.settings.SettingsPanel',
@@ -220,4 +221,6 @@ DEBUG_TOOLBAR_CONFIG = {
         'debug_toolbar.panels.profiling.ProfilingPanel',
     },
     'SHOW_COLLAPSED': True,
+    # Panel options
+    'SQL_WARNING_THRESHOLD': 50,
 }

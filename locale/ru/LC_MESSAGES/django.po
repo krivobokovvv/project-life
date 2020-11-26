@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 16:38+0300\n"
+"POT-Creation-Date: 2020-11-26 08:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: \n"
@@ -70,19 +70,19 @@ msgid "Pages"
 msgstr "Страницы"
 
 #: comics/models.py:52 persons/models.py:43 persons/models.py:55
-#: tasks/models.py:26 tasks/models.py:38 tasks/models.py:50
+#: tasks/models.py:26 tasks/models.py:40 tasks/models.py:52
 msgid "Name"
 msgstr "Имя"
 
-#: comics/models.py:53 tasks/models.py:39
+#: comics/models.py:53 tasks/models.py:41
 msgid "Color"
 msgstr "Цвет"
 
-#: comics/models.py:56 tasks/models.py:42
+#: comics/models.py:56 tasks/models.py:44
 msgid "Tag"
 msgstr "Тег"
 
-#: comics/models.py:57 tasks/models.py:12 tasks/models.py:43
+#: comics/models.py:57 tasks/models.py:12 tasks/models.py:45
 msgid "Tags"
 msgstr "Теги"
 
@@ -94,15 +94,15 @@ msgstr "Время создания"
 msgid "Change time"
 msgstr "Время изменения"
 
-#: life/settings.py:132
+#: life/settings.py:125
 msgid "Russian"
 msgstr "Русский"
 
-#: life/settings.py:133
+#: life/settings.py:126
 msgid "English"
 msgstr "Английский"
 
-#: main/apps.py:7
+#: main/apps.py:7 tasks/forms.py:24
 msgid "Main"
 msgstr "Главная"
 
@@ -116,18 +116,17 @@ msgstr "Название приложения"
 
 #: main/templates/main/index.html:6 tasks/apps.py:7 tasks/models.py:19
 #: tasks/templates/tasks/task_confirm_delete.html:4
-#: tasks/templates/tasks/task_create.html:4
 #: tasks/templates/tasks/task_detail.html:4
 #: tasks/templates/tasks/task_form.html:4
 #: tasks/templates/tasks/task_list.html:4
 msgid "Tasks"
 msgstr "Задачи"
 
-#: main/templates/widgets/change_language.html:16 tasks/views.py:71
+#: main/templates/widgets/change_language.html:16
 msgid "Apply"
 msgstr "Применить"
 
-#: main/templatetags/main_tags.py:16
+#: main/templatetags/main_tags.py:13
 #, python-format
 msgid "%d year"
 msgid_plural "%d years"
@@ -136,7 +135,7 @@ msgstr[1] "%d года"
 msgstr[2] "%d лет"
 msgstr[3] "%d лет"
 
-#: main/templatetags/main_tags.py:17
+#: main/templatetags/main_tags.py:14
 #, python-format
 msgid "%d month"
 msgid_plural "%d months"
@@ -145,7 +144,7 @@ msgstr[1] "%d месяца"
 msgstr[2] "%d месяцев"
 msgstr[3] "%d месяцев"
 
-#: main/templatetags/main_tags.py:18
+#: main/templatetags/main_tags.py:15
 #, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
@@ -154,7 +153,7 @@ msgstr[1] "%d недели"
 msgstr[2] "%d недель"
 msgstr[3] "%d недель"
 
-#: main/templatetags/main_tags.py:19
+#: main/templatetags/main_tags.py:16
 #, python-format
 msgid "%d day"
 msgid_plural "%d days"
@@ -163,7 +162,7 @@ msgstr[1] "%d дня"
 msgstr[2] "%d дней"
 msgstr[3] "%d дней"
 
-#: main/templatetags/main_tags.py:20
+#: main/templatetags/main_tags.py:17
 #, python-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -172,7 +171,7 @@ msgstr[1] "%d часа"
 msgstr[2] "%d часов"
 msgstr[3] "%d часов"
 
-#: main/templatetags/main_tags.py:21
+#: main/templatetags/main_tags.py:18
 #, python-format
 msgid "%d minute"
 msgid_plural "%d minutes"
@@ -181,7 +180,7 @@ msgstr[1] "%d минуты"
 msgstr[2] "%d минут"
 msgstr[3] "%d минут"
 
-#: main/templatetags/main_tags.py:22
+#: main/templatetags/main_tags.py:19
 #, python-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -190,12 +189,12 @@ msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
 msgstr[3] "%d секунд"
 
-#: main/templatetags/main_tags.py:23
+#: main/templatetags/main_tags.py:20
 #, python-format
 msgid "%s ago"
 msgstr "%s назад"
 
-#: main/templatetags/main_tags.py:24
+#: main/templatetags/main_tags.py:21
 #, python-format
 msgid "%s from now"
 msgstr "через %s"
@@ -244,7 +243,7 @@ msgstr "Удалено?"
 msgid "Person"
 msgstr "Персона"
 
-#: persons/models.py:32 tasks/templates/tasks/task_detail.html:18
+#: persons/models.py:32 tasks/templates/tasks/task_detail.html:15
 msgid "Value"
 msgstr "Значение"
 
@@ -280,6 +279,18 @@ msgstr "Организация"
 msgid "Companies"
 msgstr "Организации"
 
+#: tasks/forms.py:31
+msgid "Second"
+msgstr "Дополнительная"
+
+#: tasks/forms.py:39
+msgid "Save"
+msgstr "Сохранить"
+
+#: tasks/forms.py:40
+msgid "Reset"
+msgstr "Сброс"
+
 #: tasks/models.py:10
 msgid "Subject"
 msgstr "Тема"
@@ -288,11 +299,11 @@ msgstr "Тема"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: tasks/models.py:14 tasks/models.py:54
+#: tasks/models.py:14 tasks/models.py:56
 msgid "Status"
 msgstr "Статус"
 
-#: tasks/models.py:15 tasks/models.py:30
+#: tasks/models.py:15 tasks/models.py:32
 msgid "Project"
 msgstr "Проект"
 
@@ -304,15 +315,19 @@ msgstr "Задача"
 msgid "Description"
 msgstr "Описание"
 
-#: tasks/models.py:31
+#: tasks/models.py:28
+msgid "Parent project"
+msgstr "Родительский проект"
+
+#: tasks/models.py:33
 msgid "Projects"
 msgstr "Проекты"
 
-#: tasks/models.py:51
+#: tasks/models.py:53
 msgid "Closed?"
 msgstr "Закрыта?"
 
-#: tasks/models.py:55
+#: tasks/models.py:57
 msgid "Statuses"
 msgstr "Статусы"
 
@@ -320,42 +335,31 @@ msgstr "Статусы"
 msgid "Delete task"
 msgstr "Удалить задачу"
 
-#: tasks/templates/tasks/task_create.html:7
-msgid "Create Task"
-msgstr "Создать Задачу"
-
-#: tasks/templates/tasks/task_detail.html:17
-msgid "Key"
-msgstr "Ключ"
-
+#: tasks/templates/tasks/task_confirm_delete.html:11
 #: tasks/templates/tasks/task_detail.html:29
-msgid "Edit"
-msgstr "Редактировать"
-
-#: tasks/templates/tasks/task_detail.html:32 tasks/views.py:86
 msgid "Delete"
 msgstr "Удалить"
 
-#: tasks/templates/tasks/task_form.html:7
-msgid "Update Task"
-msgstr "Редактирование Задачи"
+#: tasks/templates/tasks/task_detail.html:14
+msgid "Key"
+msgstr "Ключ"
 
-#: tasks/templates/tasks/task_list.html:7
+#: tasks/templates/tasks/task_detail.html:26
+msgid "Edit"
+msgstr "Редактировать"
+
+#: tasks/templates/tasks/task_list.html:7 tasks/views.py:24
 msgid "Create task"
 msgstr "Создать задачу"
 
-#: tasks/views.py:49
-msgid "Create"
-msgstr "Создать"
+#: tasks/views.py:43
+msgid "Update task"
+msgstr "Редактирование Задачи"
 
-#: tasks/views.py:50 tasks/views.py:72
-msgid "Reset"
-msgstr "Сброс"
-
-#: tasks/views.py:76
+#: tasks/views.py:47
 msgid "Task updated!"
 msgstr "Задача обновлена!"
 
-#: tasks/views.py:90
+#: tasks/views.py:60
 msgid "Task deleted!"
 msgstr "Задача удалена!"

@@ -90,9 +90,13 @@ WSGI_APPLICATION = 'life.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'HOST': 'host',
+        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbname',
+        'USER': 'django',
+        'PASSWORD': 'password',
+    },
 }
 
 # Password validation

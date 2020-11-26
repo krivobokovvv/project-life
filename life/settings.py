@@ -20,13 +20,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#g0ggqku%(ug8-!l7p8@xiq98n$1x+_8^9zsph&_d81m6(v##+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    os.getenv('ALLOWED_HOSTS_IP'),
+    os.getenv('ALLOWED_HOSTS_DOMAIN')
+]
 
 # Application definition
 
@@ -90,12 +96,12 @@ WSGI_APPLICATION = 'life.wsgi.application'
 
 DATABASES = {
     'default': {
-        'HOST': 'host',
-        'PORT': '5432',
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT'),
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbname',
-        'USER': 'django',
-        'PASSWORD': 'password',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
     },
 }
 

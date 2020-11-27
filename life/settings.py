@@ -194,9 +194,7 @@ if DEBUG:
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Django Debug Toolbar
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+INTERNAL_IPS = ALLOWED_HOSTS
 
 DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.versions.VersionsPanel',

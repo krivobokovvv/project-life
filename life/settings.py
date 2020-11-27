@@ -27,7 +27,7 @@ load_dotenv()
 SECRET_KEY = '#g0ggqku%(ug8-!l7p8@xiq98n$1x+_8^9zsph&_d81m6(v##+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     os.getenv('ALLOWED_HOSTS_IP'),
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'colorfield',
     'bootstrap4',
-    'debug_toolbar',
     'crispy_forms',
 
     'generic',
@@ -68,7 +67,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'life.urls'
@@ -192,43 +190,3 @@ if DEBUG:
 
 # Django Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-# Django Debug Toolbar
-INTERNAL_IPS = ALLOWED_HOSTS
-
-DEBUG_TOOLBAR_PANELS = [
-    'debug_toolbar.panels.versions.VersionsPanel',
-    'debug_toolbar.panels.timer.TimerPanel',
-    'debug_toolbar.panels.settings.SettingsPanel',
-    'debug_toolbar.panels.headers.HeadersPanel',
-    'debug_toolbar.panels.request.RequestPanel',
-    'debug_toolbar.panels.sql.SQLPanel',
-    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-    'debug_toolbar.panels.templates.TemplatesPanel',
-    'debug_toolbar.panels.cache.CachePanel',
-    'debug_toolbar.panels.signals.SignalsPanel',
-    'debug_toolbar.panels.logging.LoggingPanel',
-    'debug_toolbar.panels.redirects.RedirectsPanel',
-    'debug_toolbar.panels.profiling.ProfilingPanel',
-]
-
-DEBUG_TOOLBAR_CONFIG = {
-    # Toolbar options
-    'DISABLE_PANELS': {
-        'debug_toolbar.panels.versions.VersionsPanel',
-        'debug_toolbar.panels.settings.SettingsPanel',
-        'debug_toolbar.panels.headers.HeadersPanel',
-        'debug_toolbar.panels.request.RequestPanel',
-        'debug_toolbar.panels.sql.SQLPanel',
-        'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-        'debug_toolbar.panels.templates.TemplatesPanel',
-        'debug_toolbar.panels.cache.CachePanel',
-        'debug_toolbar.panels.signals.SignalsPanel',
-        'debug_toolbar.panels.logging.LoggingPanel',
-        'debug_toolbar.panels.redirects.RedirectsPanel',
-        'debug_toolbar.panels.profiling.ProfilingPanel',
-    },
-    'SHOW_COLLAPSED': True,
-    # Panel options
-    'SQL_WARNING_THRESHOLD': 50,
-}

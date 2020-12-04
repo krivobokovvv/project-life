@@ -35,7 +35,7 @@ class TaskForm(forms.ModelForm):
                 'project',
             ),
             ButtonHolder(
-                Button('submit', 'Save', input_type='button', css_class='btn-outline-primary'),
+                Button('submit', _('Save'), input_type='button', css_class='btn-outline-primary'),
                 Submit('submit', _('Save'), css_class='btn-outline-primary'),
                 Reset('reset', _('Reset'), css_class='btn-outline-danger')
             ),

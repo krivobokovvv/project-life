@@ -28,18 +28,22 @@
 - [ ] Статусы задачи
 
 ```mermaid
-flowchart LR
-    N(New)
-    P(In Progress)
-    Pp(Postponed)
-    C[Completed]
-    R[Rejected]
+stateDiagram-v2
+    N : New
+    P : In Progress
+    Pp : Postponed
+    C : Completed
+    R : Rejected
 
-    N -- To work --> P
-    P -- Solved --> C
-    P -- Reject --> R
-    P -- Test 1 --> Pp
-    Pp -- Test 2 --> P
+    [*] --> N
+    N --> P : To work
+    P --> R : Reject
+    P --> C : Solved
+    P --> Pp : Pause
+    Pp --> P : Continue
+    Pp --> R : Reject
+    R --> [*]
+    C --> [*]
 ```
 
 ### Дневник

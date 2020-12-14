@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'comics',
     'persons',
     'tasks',
+    'dairy',
 ]
 
 MIDDLEWARE = [

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'debug_toolbar',
     'crispy_forms',
+    'markitup',
 
     'generic',
     'main',
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
     'persons',
     'tasks',
     'dairy',
+
+    #'markitup',
 ]
 
 MIDDLEWARE = [
@@ -221,3 +224,7 @@ DEBUG_TOOLBAR_CONFIG = {
     # Panel options
     'SQL_WARNING_THRESHOLD': 50,
 }
+
+# Django Markupit
+MARKITUP_FILTER = ('marko.convert', {})
+MARKITUP_AUTO_PREVIEW = True

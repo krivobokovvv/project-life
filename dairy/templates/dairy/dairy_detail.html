@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static i18n main_tags markitup_tags %}
+
+{% block title %}{% trans 'Tasks' %}{% endblock title %}
+
+{% block assets %}
+<link href="{% static "css/markit.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <p>{{ dairy.id }}</p>
+    <p>{{ dairy.day }}</p>
+    <p>{{ dairy.format }}</p>
+    <div class="markdown-body">{{ dairy.article|render_markup|safe }}</div>
+    <div class="markdown-body">{{ dairy.article_m }}</div>
+    
+    <a href="{% url 'dairy-update' dairy.id %}">
+        <button type="button" class="btn btn-primary">{% trans 'Edit' %}</button>
+    </a>
+{% endblock %}

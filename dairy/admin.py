@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import Dairy
+from django.db import models
 
 from markitup.widgets import AdminMarkItUpWidget
 

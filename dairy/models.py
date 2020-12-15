@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from markitup.fields import MarkupField
+
 # Create your models here.
 class FORMAT(models.IntegerChoices):
     md = 1, 'Markdown'
@@ -16,6 +18,10 @@ class Dairy(models.Model):
         default=FORMAT.bbcode
     )
     article = models.TextField()
+    article_m = MarkupField()
+
+    def get_format_name(self):
+        pass
 
     def __str__(self):
         return f'{self.day}'

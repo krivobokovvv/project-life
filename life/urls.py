@@ -7,6 +7,8 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('tasks/', include('tasks.urls')),
+    path('dairy/', include('dairy.urls')),
+    url(r'^markitup/', include('markitup.urls')),
     url('i18n/', include('django.conf.urls.i18n')),
     path('', include('main.urls')),
     path('admin/', admin.site.urls),

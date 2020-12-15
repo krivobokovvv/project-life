@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load i18n bootstrap4 main_tags %}
+
+{% block title %}{% trans 'Tasks' %}{% endblock title %}
+
+{% block content %}
+    <ul>
+        {% for dairy in object_list %}
+            <li>
+                <a href="{% url 'dairy-detail' dairy.id %}">{{ dairy.day }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% bootstrap_pagination page_obj %}
+{% endblock %}

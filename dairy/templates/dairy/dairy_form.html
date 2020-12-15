@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load i18n bootstrap4 crispy_forms_tags markitup_tags %}
+
+{% block title %}{% trans 'Tasks' %}{% endblock title %}
+
+{% block assets %}
+<script type="text/javascript" src="/static/markitup/ajax_csrf.js"></script>
+<script type="text/javascript" src="/static/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="/static/markitup/sets/default/set.js"></script>
+<script type="text/javascript" src="/static/markitup/django-markitup.js"></script>
+{% endblock %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+
+    <form method="POST">
+        {% crispy form %}
+    </form>
+{% endblock %}

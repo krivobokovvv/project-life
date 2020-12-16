@@ -8,13 +8,11 @@
 {% endblock %}
 
 {% block content %}
-    <p>{{ dairy.id }}</p>
-    <p>{{ dairy.day }}</p>
-    <p>{{ dairy.format }}</p>
-    <div class="markdown-body">{{ dairy.article|render_markup|safe }}</div>
-    <div class="markdown-body">{{ dairy.article_m }}</div>
+    <p>{{ article.id }}</p>
+    <p>{{ article.day }}</p>
+    <div class="markdown-body">{{ article.text }}</div>
     
-    <a href="{% url 'dairy-update' dairy.id %}">
+    <a href="{% url 'article-update' article.id %}">
         <button type="button" class="btn btn-primary">{% trans 'Edit' %}</button>
     </a>
 {% endblock %}

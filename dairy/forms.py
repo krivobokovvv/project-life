@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Dairy
+from .models import Article
 
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Row, Reset, Column, Button
@@ -8,47 +8,40 @@ from crispy_forms.bootstrap import AppendedText, Alert
 
 from django.utils.translation import gettext_lazy as _
 
-from markitup.widgets import AdminMarkItUpWidget
+from markitup.widgets import MarkItUpWidget
 
 
-class DairyForm(forms.ModelForm):
+class ArticleForm(forms.ModelForm):
     class Meta:
-        model = Dairy
+        model = Article
         fields = '__all__'
     
-    article = forms.CharField(widget=AdminMarkItUpWidget())
-    article_m = forms.CharField(widget=AdminMarkItUpWidget())
-'''
+    text = forms.CharField(widget=MarkItUpWidget())
+    day = forms.DateField(
+        widget=forms.TextInput(
+            attrs={'type': 'date'}
+        )
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            Alert(content="<strong>Warning!</strong> Best check yo self, you're not looking too good.",
-                  css_class='alert-warning'),
-            Fieldset(
-                _('Main'),
-                Row(
-                    Column(AppendedText('subject', '$', active=True), css_class='col-md-3'),
-                    Column('description'),
-                ),
-            ),
             Fieldset(
                 _('Second'),
-                'tags',
-                'persons',
-                'status',
-                'project',
+                'id',
+                'day',
+                'text',
             ),
             ButtonHolder(
-                Button('submit', _('Save'), input_type='button', css_class='btn-outline-primary'),
-                Submit('submit', _('Save'), css_class='btn-outline-primary'),
-                Reset('reset', _('Reset'), css_class='btn-outline-danger')
+                Submit('submit', _('Save'), css_class=''),
+                Reset('reset', _('Reset'), css_class='btn-danger')
             ),
         )
-'''
+
 
 
 class UpdateDairyForm(forms.ModelForm):
     class Meta:
-        model = Dairy
+        model = Article
         fields = '__all__'

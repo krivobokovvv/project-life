@@ -32,14 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django_extensions',
-    'sorl.thumbnail',
-    'colorfield',
-    'bootstrap4',
-    'debug_toolbar',
-    'crispy_forms',
-    'markitup',
-
     'generic',
     'main',
     'bookkeeping',
@@ -48,7 +40,13 @@ INSTALLED_APPS = [
     'tasks',
     'dairy',
 
-    #'markitup',
+    'django_extensions',
+    'sorl.thumbnail',
+    'colorfield',
+    'bootstrap4',
+    'debug_toolbar',
+    'crispy_forms',
+    'markitup',
 ]
 
 MIDDLEWARE = [

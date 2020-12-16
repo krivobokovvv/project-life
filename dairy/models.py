@@ -3,22 +3,13 @@ from django.utils.translation import gettext_lazy as _
 
 from markitup.fields import MarkupField
 
-# Create your models here.
-class FORMAT(models.IntegerChoices):
-    md = 1, 'Markdown'
-    bbcode = 2, 'BBCode'
-    rst = 3, 'reStructuredText'
+from generic.models import DateTimeMixin
 
 
-class Dairy(models.Model):
+class Article(DateTimeMixin):
     day = models.DateField(unique=True)
     text = models.TextField
-    format = models.PositiveSmallIntegerField(
-        choices=FORMAT.choices,
-        default=FORMAT.bbcode
-    )
-    article = models.TextField()
-    article_m = MarkupField()
+    text = MarkupField()
 
     def get_format_name(self):
         pass

@@ -1,11 +1,11 @@
 from django.urls import path
 
-from .views import DairyListView, DairyDetailView, DairyCreateView, DairyUpdateView
+from .views import ArticleListView, ArticleDetailView, ArticleCreateView, ArticleUpdateView
 
 urlpatterns = (
-    path('', DairyListView.as_view(), name='dairy-list'),
-    path('task/create/', DairyCreateView.as_view(), name='dairy-create'),
-    path('dairy/<int:pk>/detail', DairyDetailView.as_view(), name='dairy-detail'),
-    path('task/<int:pk>/update', DairyUpdateView.as_view(), name='dairy-update'),
+    path('', ArticleListView.as_view(), name='article-list'),
+    path('task/create/', ArticleCreateView.as_view(), name='article-create'),
+    path('dairy/<int:pk>/detail', ArticleDetailView.as_view(), name='article-detail'),
+    path('task/<int:pk>/update', ArticleUpdateView.as_view(), name='article-update'),
     #path('task/<int:pk>/delete', TaskDeleteView.as_view(), name='task-delete'),
 )

@@ -5,9 +5,9 @@
 
 {% block content %}
     <ul>
-        {% for dairy in object_list %}
+        {% for article in object_list %}
             <li>
-                <a href="{% url 'dairy-detail' dairy.id %}">{{ dairy.day }}</a>
+                <a href="{% url 'article-detail' article.id %}">{{ article.day }}</a>
             </li>
         {% endfor %}
     </ul>

@@ -5,19 +5,19 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 
-from .forms import DairyForm
-from .models import Dairy
+from .forms import ArticleForm
+from .models import Article
 
 
-class DairyListView(ListView):
+class ArticleListView(ListView):
     paginate_by = 10
-    queryset = Dairy.objects.order_by('-day')
+    queryset = Article.objects.order_by('-day')
 
 
-class DairyCreateView(CreateView):
-    model = Dairy
-    form_class = DairyForm
-    success_url = reverse_lazy('dairy-list')
+class ArticleCreateView(CreateView):
+    model = Article
+    form_class = ArticleForm
+    success_url = reverse_lazy('article-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -25,18 +25,18 @@ class DairyCreateView(CreateView):
         return context
 
 
-class DairyDetailView(DetailView):
-    model = Dairy
+class ArticleDetailView(DetailView):
+    model = Article
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
 
 
-class DairyUpdateView(UpdateView):
-    model = Dairy
-    form_class = DairyForm
-    success_url = reverse_lazy('dairy-list')
+class ArticleUpdateView(UpdateView):
+    model = Article
+    form_class = ArticleForm
+    success_url = reverse_lazy('article-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -27,12 +27,9 @@ class ArticleForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            Fieldset(
-                _('Second'),
-                'id',
-                'day',
-                'text',
-            ),
+            'id',
+            'day',
+            'text',
             ButtonHolder(
                 Submit('submit', _('Save'), css_class=''),
                 Reset('reset', _('Reset'), css_class='btn-danger')

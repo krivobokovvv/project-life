@@ -11,8 +11,8 @@
     <p>{{ article.id }}</p>
     <p>{{ article.day }}</p>
     <div class="markdown-body">{{ article.text }}</div>
-    
-    <a href="{% url 'article-update' article.id %}">
+    <br/>
+    <a href="{% url 'dairy:article-update' article.id %}">
         <button type="button" class="btn btn-primary">{% trans 'Edit' %}</button>
     </a>
 {% endblock %}

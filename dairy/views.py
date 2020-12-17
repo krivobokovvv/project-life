@@ -17,7 +17,7 @@ class ArticleListView(ListView):
 class ArticleCreateView(CreateView):
     model = Article
     form_class = ArticleForm
-    success_url = reverse_lazy('article-list')
+    success_url = reverse_lazy('dairy:article-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -36,7 +36,7 @@ class ArticleDetailView(DetailView):
 class ArticleUpdateView(UpdateView):
     model = Article
     form_class = ArticleForm
-    success_url = reverse_lazy('article-list')
+    success_url = reverse_lazy('dairy:article-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

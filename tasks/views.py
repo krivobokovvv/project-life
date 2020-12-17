@@ -17,7 +17,7 @@ class TasksListView(ListView):
 class TaskCreateView(CreateView):
     model = Task
     form_class = TaskForm
-    success_url = reverse_lazy('task-list')
+    success_url = reverse_lazy('tasks:task-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -36,7 +36,7 @@ class TaskDetailView(DetailView):
 class TaskUpdateView(UpdateView):
     model = Task
     form_class = TaskForm
-    success_url = reverse_lazy('task-list')
+    success_url = reverse_lazy('tasks:task-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -50,7 +50,7 @@ class TaskUpdateView(UpdateView):
 
 class TaskDeleteView(DeleteView):
     model = Task
-    success_url = reverse_lazy('task-list')
+    success_url = reverse_lazy('tasks:task-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

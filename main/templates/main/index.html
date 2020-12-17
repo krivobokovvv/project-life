@@ -3,6 +3,6 @@
 {% load i18n %}
 
 {% block content %}
-    <a href="{% url 'task-list' %}">{% trans 'Tasks' %}</a>
-    <a href="{% url 'article-list' %}">{% trans 'Dairy' %}</a>
+    <p><a href="{% url 'tasks:task-list' %}">{% trans 'Tasks' %}</a></p>
+    <p><a href="{% url 'dairy:article-list' %}">{% trans 'Dairy' %}</a></p>
 {% endblock %}

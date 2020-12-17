@@ -9,5 +9,5 @@ from markitup.widgets import AdminMarkItUpWidget
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     article_overrides = {models.TextField: {'widget': AdminMarkItUpWidget}}
-    list_display = ('id', 'day', 'text')
+    list_display = ('id', 'day')
     list_filter = ('day',)

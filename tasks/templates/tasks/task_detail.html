@@ -22,10 +22,10 @@
         </div>
     </div>
 
-    <a href="{% url 'task-update' task.id %}">
+    <a href="{% url 'tasks:task-update' task.id %}">
         <button type="button" class="btn btn-primary">{% trans 'Edit' %}</button>
     </a>
-    <a href="{% url 'task-delete' task.id %}">
+    <a href="{% url 'tasks:task-delete' task.id %}">
         <button type="button" class="btn btn-danger">{% trans 'Delete' %}</button>
     </a>
 {% endblock %}

@@ -4,11 +4,11 @@
 {% block title %}{% trans 'Tasks' %}{% endblock title %}
 
 {% block content %}
-    <a href="{% url 'task-create' %}">{% trans 'Create task' %}</a>
+    <a href="{% url 'tasks:task-create' %}">{% trans 'Create task' %}</a>
     <ul>
         {% for task in object_list %}
             <li>
-                <a href="{% url 'task-detail' task.id %}">#{{ task.id }} {{ task.project }} - {{ task.subject }}
+                <a href="{% url 'tasks:task-detail' task.id %}">#{{ task.id }} {{ task.project }} - {{ task.subject }}
                     ({{ task.status }}) ({{ task.change_time|naturaltime }})</a>
             </li>
         {% endfor %}

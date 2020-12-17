@@ -971,15 +971,15 @@
   tab-size: 12;
 }
 
-.markdown-body .task-list-item {
+.markdown-body .tasks:task-list-item {
   list-style-type: none;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .tasks:task-list-item+.tasks:task-list-item {
   margin-top: 3px;
 }
 
-.markdown-body .task-list-item input {
+.markdown-body .tasks:task-list-item input {
   margin: 0 .2em .25em -1.6em;
   vertical-align: middle;
 }

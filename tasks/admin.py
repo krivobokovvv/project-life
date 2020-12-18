@@ -7,7 +7,7 @@ from .models import Task, Project, Tag, Status
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('id', 'subject', 'description', 'status')
-    list_filter = ('status', 'project')
+    list_filter = ('status', 'project2')
     raw_id_fields = ('tags', 'persons')
     autocomplete_fields = ('project', 'status', 'tags')
     search_fields = ('subject',)

@@ -18,8 +18,6 @@ class TaskForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            Alert(content="<strong>Warning!</strong> Best check yo self, you're not looking too good.",
-                  css_class='alert-warning'),
             Fieldset(
                 _('Main'),
                 Row(
@@ -35,9 +33,8 @@ class TaskForm(forms.ModelForm):
                 'project',
             ),
             ButtonHolder(
-                Button('submit', _('Save'), input_type='button', css_class='btn-outline-primary'),
-                Submit('submit', _('Save'), css_class='btn-outline-primary'),
-                Reset('reset', _('Reset'), css_class='btn-outline-danger')
+                Submit('submit', _('Save'), css_class='btn-primary'),
+                Reset('reset', _('Reset'), css_class='btn-danger'),
             ),
         )
 

@@ -32,13 +32,13 @@ stateDiagram-v2
     N : New
     P : In Progress
     Pp : Postponed
-    C : Completed
+    C : Solved
     R : Rejected
 
     [*] --> N
     N --> P : To work
     P --> R : Reject
-    P --> C : Solved
+    P --> C : Solve
     P --> Pp : Pause
     Pp --> P : Continue
     Pp --> R : Reject
@@ -51,7 +51,7 @@ stateDiagram-v2
     N : Новый
     P : В процессе
     Pp : Приостановлено
-    C : Завершено
+    C : Решено
     R : Отклонено
 
     [*] --> N

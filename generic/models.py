@@ -26,4 +26,4 @@ class DateTimeMixin(Model):
         change_time_field.auto_now = False
         self.change_time = time
         self.save()
-        change_time_field = True
+        change_time_field.auto_now = True

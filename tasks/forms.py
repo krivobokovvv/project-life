@@ -3,8 +3,8 @@ from django import forms
 from .models import Task
 
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Row, Reset, Column, Button
-from crispy_forms.bootstrap import AppendedText, Alert
+from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Row, Reset, Column
+from crispy_forms.bootstrap import AppendedText
 
 from django.utils.translation import gettext_lazy as _
 

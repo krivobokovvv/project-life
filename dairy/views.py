@@ -46,3 +46,16 @@ class ArticleUpdateView(UpdateView):
     def post(self, request, *args, **kwargs):
         messages.add_message(request, messages.SUCCESS, _('Task updated!'))
         return super().post(request, *args, **kwargs)
+
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    success_url = reverse_lazy('dairy:article-list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        messages.add_message(request, messages.SUCCESS, _('Task deleted!'))
+        return super().post(request, *args, **kwargs)

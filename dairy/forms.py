@@ -3,8 +3,7 @@ from django import forms
 from .models import Article
 
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Row, Reset, Column, Button
-from crispy_forms.bootstrap import AppendedText, Alert
+from crispy_forms.layout import Layout, ButtonHolder, Submit, Reset
 
 from django.utils.translation import gettext_lazy as _
 
@@ -15,7 +14,7 @@ class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = '__all__'
-    
+
     text = forms.CharField(widget=MarkItUpWidget())
     day = forms.DateField(
         widget=forms.TextInput(
@@ -35,7 +34,6 @@ class ArticleForm(forms.ModelForm):
                 Reset('reset', _('Reset'), css_class='btn-danger')
             ),
         )
-
 
 
 class UpdateDairyForm(forms.ModelForm):

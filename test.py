@@ -1,6 +1,8 @@
 import mistune
 from markdown import markdown
 
+import marko
+
 md = """
 # Header 1
 ## Header 2
@@ -45,6 +47,5 @@ open('mistune.html', 'w').write(html)
 html = markdown(md)
 open('markdown.html', 'w').write(html)
 
-import marko
 html = marko.convert(md)
 open('marko.html', 'w').write(html)

@@ -10,8 +10,34 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand navbar">
+    <a class="navbar-brand" href="{% url 'index' %}">Тест</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav pt-1">
+            {% include 'widgets/change_language.html' %}
+            {% comment %}<li class="nav-item"><a class="nav-link" href="{% url 'map' %}">Карта</a></li>{% endcomment %}
+        </ul>
+    </div>
+    <div>
+        <ul class="navbar-nav pt-1">
+            <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"><img title="Панель администрирования" alt="Панель администрирования" class="material-icon" src="{% static 'img/baseline_admin_panel_settings_white_36dp.png' %}"/></a></li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}"><img title="Профиль пользователя" alt="Профиль пользователя" class="material-icon" src="{% static 'img/baseline_account_circle_white_36dp.png' %}"/></a>
+                </li>
+                {% if user.is_staff %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"><img title="Панель администрирования" alt="Панель администрирования" class="material-icon" src="{% static 'img/baseline_admin_panel_settings_white_36dp.png' %}"/></a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"><img title="Выйти" alt="Выйти" class="material-icon" src="{% static 'img/baseline_exit_to_app_white_36dp.png' %}"/></a></li>
+            {% else %}
+                {% comment %}<li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><img title="Войти" alt="Войти" class="material-icon" src="{% static 'img/baseline_login_white_36dp.png' %}"/></a></li>{% endcomment %}
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+    
 <div class="container">
-    {% include 'widgets/change_language.html' %}
     {% bootstrap_messages %}
 
     {% block content %}
